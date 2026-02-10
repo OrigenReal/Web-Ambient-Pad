@@ -82,7 +82,7 @@ buttons.forEach(button => {
 
         const note = button.dataset.note;
         const type = button.dataset.type;
-        const soundUrl = `sounds/${type}_${note}.wav`; 
+        const soundUrl = `sounds/${type}_${note}.mp3`; 
 
         // --- Lógica de Toggle ---
         if (currentlyPlayingNote === note) {
@@ -99,4 +99,5 @@ buttons.forEach(button => {
         }
         // -------------------------
     });
+
 });
