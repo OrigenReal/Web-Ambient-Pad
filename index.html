@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Ambient Pad</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="app-container">
+        <h1>Web Ambient Pad</h1>
+        
+        <div class="controls">
+            <button class="pad-button" data-note="C" data-type="major">C</button>
+            <button class="pad-button" data-note="Db" data-type="major">Db</button>
+            <button class="pad-button" data-note="D" data-type="major">D</button>
+            <button class="pad-button" data-note="Eb" data-type="major">Eb</button>
+            <button class="pad-button" data-note="E" data-type="major">E</button>
+            <button class="pad-button" data-note="F" data-type="major">F</button>
+            <button class="pad-button" data-note="Gb" data-type="major">Gb</button>
+            <button class="pad-button" data-note="G" data-type="major">G</button>
+            <button class="pad-button" data-note="Ab" data-type="major">Ab</button>
+            <button class="pad-button" data-note="A" data-type="major">A</button>
+            <button class="pad-button" data-note="Bb" data-type="major">Bb</button>
+            <button class="pad-button" data-note="B" data-type="major">B</button>
+        </div>
+
+        <div class="slider-container">
+            <label for="fadeSlider">Velocidad de Transición:</label>
+            <input type="range" id="fadeSlider" min="0.5" max="5" step="0.5" value="1.5">
+            <span id="fadeValue">1.5s</span>
+        </div>
+
+        <div class="slider-container">
+            <label for="volumeSlider">Volumen Maestro:</label>
+            <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="0.7">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

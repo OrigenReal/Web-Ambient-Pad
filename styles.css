@@ -1,0 +1,87 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.app-container {
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+}
+
+.controls {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.pad-button {
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    border: 2px solid #555;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+/* --- Diferencia de color para notas --- */
+/* Notas Naturales (C, D, E, F, G, A, B) */
+.pad-button[data-note="C"],
+.pad-button[data-note="D"],
+.pad-button[data-note="E"],
+.pad-button[data-note="F"],
+.pad-button[data-note="G"],
+.pad-button[data-note="A"],
+.pad-button[data-note="B"] {
+    background-color: #444; /* Gris más claro */
+}
+
+/* Notas Alteradas (Db, Eb, Gb, Ab, Bb) */
+.pad-button[data-note="Db"],
+.pad-button[data-note="Eb"],
+.pad-button[data-note="Gb"],
+.pad-button[data-note="Ab"],
+.pad-button[data-note="Bb"] {
+    background-color: #222; /* Gris más oscuro */
+    border-color: #777;
+}
+/* ------------------------------------- */
+
+/* Animación para el botón activo */
+.pad-button.active {
+    border-color: #007bff;
+    background-color: #0056b3; 
+    box-shadow: 0 0 15px #007bff;
+    animation: pulse-shadow 1.5s infinite;
+}
+
+@keyframes pulse-shadow {
+    0% { box-shadow: 0 0 5px #007bff; }
+    50% { box-shadow: 0 0 20px #007bff; }
+    100% { box-shadow: 0 0 5px #007bff; }
+}
+
+.slider-container {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* --- Sliders simplificados para compatibilidad --- */
+input[type="range"] {
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+}
+/* ----------------------------------------------- */
